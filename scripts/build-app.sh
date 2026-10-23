@@ -19,8 +19,8 @@ if [[ "${UNIVERSAL:-0}" == "1" ]]; then
   ARCH_FLAGS=(--arch arm64 --arch x86_64)
 fi
 
-swift build -c "$CONFIG" "${ARCH_FLAGS[@]}"
-BIN_DIR="$(swift build -c "$CONFIG" "${ARCH_FLAGS[@]}" --show-bin-path)"
+swift build -c "$CONFIG" ${ARCH_FLAGS[@]+"${ARCH_FLAGS[@]}"}
+BIN_DIR="$(swift build -c "$CONFIG" ${ARCH_FLAGS[@]+"${ARCH_FLAGS[@]}"} --show-bin-path)"
 
 rm -rf "$APP"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
