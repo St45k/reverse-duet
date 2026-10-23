@@ -1,0 +1,9 @@
+{
+  "name": "Reverse Duet",
+  "short_name": "Duet",
+  "start_url": "/",
+  "display": "fullscreen",
+  "background_color": "#000000",
+  "theme_color": "#2E8CF7",
+  "icons": [{ "src": "logo.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
